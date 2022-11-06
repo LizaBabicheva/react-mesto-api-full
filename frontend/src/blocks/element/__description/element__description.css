@@ -1,0 +1,8 @@
+.element__description {
+  max-width: 241px;
+  display: grid;
+  grid-template-columns: 188px 22px;
+  grid-template-rows: 19px 13px;
+  gap: 3px 31px;
+  margin: 22px 20px 22px 21px;
+}

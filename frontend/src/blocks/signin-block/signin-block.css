@@ -1,0 +1,13 @@
+.signin-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 15px auto 0;
+  justify-content: center;
+}
+
+@media (max-width: 420px) {
+  .signin-block {
+    margin-top: 20px;
+  }
+}

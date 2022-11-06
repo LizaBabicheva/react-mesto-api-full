@@ -1,0 +1,20 @@
+.menu__link {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 1s ease;
+  margin-right: 24px;
+}
+
+.menu__link:last-of-type{
+  margin-right: 0;
+}
+
+.menu__link:hover{
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 1s ease;
+}

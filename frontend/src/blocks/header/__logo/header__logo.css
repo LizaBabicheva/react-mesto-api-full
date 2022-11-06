@@ -1,0 +1,18 @@
+.header__logo {
+  display: flex;
+  max-width: 142px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* @media (max-width: 920px) {
+  .header__logo {
+    padding-left: 27px;
+  }
+} */
+
+@media (max-width: 920px) {
+  .header__logo {
+    max-width: 104px;
+  }
+}

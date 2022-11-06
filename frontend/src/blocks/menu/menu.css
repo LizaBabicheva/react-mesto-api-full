@@ -1,0 +1,10 @@
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+  }
+}

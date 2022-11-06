@@ -1,0 +1,18 @@
+.sign__submit {
+  width: 100%;
+  margin: 186px auto 0;
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.sign__submit:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 420px) {
+  .sign__submit {   
+    font-size: 16px;
+    margin-top: 143px;
+  }
+}

@@ -1,0 +1,9 @@
+.sign__input {
+  background-color: transparent;
+  color: #CCC;
+  border-bottom: 2px solid #CCC;
+}
+
+.sign__input:focus {
+  border-bottom: 2px solid #fff;
+}

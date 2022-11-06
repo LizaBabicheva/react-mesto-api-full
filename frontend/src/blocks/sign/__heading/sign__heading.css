@@ -1,0 +1,14 @@
+.sign__heading {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 auto 50px;
+}
+
+@media (max-width: 420px) {
+  .sign__heading {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}

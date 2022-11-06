@@ -1,0 +1,16 @@
+.signin-block__link {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+        opacity: 1;
+        transition: opacity 1s ease;
+        color: #fff;
+        text-decoration: none;
+      }
+      
+.signin-block__link:hover {
+        opacity: 0.6;
+        transition: opacity 1s ease;
+        cursor: pointer;
+      }
