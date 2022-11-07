@@ -94,9 +94,8 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-46',
+  baseUrl: 'https://api.mesto.lizababicheva.nomoredomains.icu',
   headers: {
-    authorization: 'c179d740-9268-4b35-9d12-1fa2b2480a1b',
     'Content-Type': 'application/json'
   }
 });
