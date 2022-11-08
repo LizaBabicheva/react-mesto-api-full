@@ -26,7 +26,7 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(requestLogger);
 
-app.use(cors());
+app.options('*', cors());
 
 app.use(routerUsers);
 app.use('/', auth, routerCards);
