@@ -11,7 +11,7 @@ const NotFoundError = require('./errors/not-found-err');
 const auth = require('./middlewares/auth');
 const { errorHandler } = require('./utils/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const { corsOptions } = require('./utils/corsOptions');
+// const { corsOptions } = require('./utils/corsOptions');
 
 const { PORT = 3000 } = process.env;
 const app = express();
@@ -26,7 +26,7 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(requestLogger);
 
-app.use(cors({ corsOptions }));
+app.use(cors());
 
 app.use(routerUsers);
 app.use('/', auth, routerCards);
