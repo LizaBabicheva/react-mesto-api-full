@@ -19,6 +19,7 @@ const app = express();
 app.use(cors({
   origin: ['http://mesto.lizababicheva.nomoredomains.icu/sign-up',
     'https://mesto.lizababicheva.nomoredomains.icu/sign-up'],
+  credentials: true,
 }));
 
 app.use(cookieParser());
