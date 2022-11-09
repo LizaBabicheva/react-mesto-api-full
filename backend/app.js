@@ -19,6 +19,7 @@ const app = express();
 app.use(cors({
   origin: ['http://mesto.lizababicheva.nomoredomains.icu',
     'https://mesto.lizababicheva.nomoredomains.icu'],
+  optionsSuccessStatus: 200,
   credentials: true,
 }));
 
