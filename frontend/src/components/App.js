@@ -56,7 +56,7 @@ function App() {
     if (loggedIn) {
       api.getInitialCards(cardData)
         .then((initialCards) => {
-          setCards(initialCards)
+          setCards(initialCards.cards)
         })
         .catch((err) => {
           console.log(err);
