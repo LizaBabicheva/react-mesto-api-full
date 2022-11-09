@@ -31,13 +31,24 @@ export const signin = (email, password) => {
     .then(getResponseData)
 };
 
-export const getToken = (token) => {
+// export const getToken = (token) => {
+//   return fetch(`${BASE_URL}/users/me`, {
+//     method: 'GET',
+//     credentials: 'include',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Authorization': `Bearer ${token}`,
+//     }
+//   })
+//     .then(getResponseData)
+// }
+
+export const getInfo = () => {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
     credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`,
     }
   })
     .then(getResponseData)

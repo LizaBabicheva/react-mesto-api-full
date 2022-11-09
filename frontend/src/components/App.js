@@ -32,8 +32,12 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const history = useHistory();
 
+  // useEffect(() => {
+  //   tokenCheck()
+  // }, [])
+
   useEffect(() => {
-    tokenCheck()
+    loginCheck()
   }, [])
 
   useEffect((userData) => {
@@ -109,21 +113,35 @@ function App() {
       })
   }
 
-  function tokenCheck() {
-    const token = localStorage.getItem('token');
-    if (token) {
-      auth.getToken(token)
-        .then((res) => {
-          if (res) {
-            setEmail(res.data.email);
-            setLoggedIn(true);
-            history.push('/');
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-    }
+  // function tokenCheck() {
+  //   const token = localStorage.getItem('token');
+  //   if (token) {
+  //     auth.getToken(token)
+  //       .then((res) => {
+  //         if (res) {
+  //           setEmail(res.data.email);
+  //           setLoggedIn(true);
+  //           history.push('/');
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       })
+  //   }
+  // }
+
+  function loginCheck() {
+    auth.getInfo()
+      .then((res) => {
+        if (res.data._id) {
+          setEmail(res.data.email);
+          setLoggedIn(true);
+          history.push('/');
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
   function handleLogin(data) {
