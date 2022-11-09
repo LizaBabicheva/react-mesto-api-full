@@ -22,6 +22,8 @@ app.use(cors({
   credentials: true,
 }));
 
+app.options('*', cors());
+
 app.use(cookieParser());
 
 app.use(bodyParser.json());
