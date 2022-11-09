@@ -17,10 +17,8 @@ const { PORT = 3000 } = process.env;
 const app = express();
 
 app.use(cors({
-  // origin: ['http://mesto.lizababicheva.nomoredomains.icu',
-  //   'https://mesto.lizababicheva.nomoredomains.icu'],
-  origin: '*',
-  // optionsSuccessStatus: 200,
+  origin: ['http://mesto.lizababicheva.nomoredomains.icu',
+    'https://mesto.lizababicheva.nomoredomains.icu'],
   credentials: true,
 }));
 
