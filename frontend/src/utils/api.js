@@ -14,6 +14,7 @@ class Api {
   getApiUserInfo() {
     return fetch(this._baseUrl + '/users/me', {
       method: 'GET',
+      credentials: 'include',
       headers: this._headers,
     })
       .then((res) => {
@@ -24,6 +25,7 @@ class Api {
   getInitialCards() {
     return fetch(this._baseUrl + '/cards', {
       method: 'GET',
+      credentials: 'include',
       headers: this._headers
     })
       .then((res) => {
@@ -34,6 +36,7 @@ class Api {
   setApiUserInfo(data) {
     return fetch(this._baseUrl + '/users/me', {
       method: 'PATCH',
+      credentials: 'include',
       headers: this._headers,
       body: JSON.stringify({
         name: data.name,
@@ -48,6 +51,7 @@ class Api {
   addNewCardApi(data) {
     return fetch(this._baseUrl + '/cards', {
       method: 'POST',
+      credentials: 'include',
       headers: this._headers,
       body: JSON.stringify({
         name: data.name,
@@ -62,6 +66,7 @@ class Api {
   changeLikeApi(id, like) {
     return fetch(this._baseUrl + `/cards/${id}/likes`, {
       method: like ? 'PUT' : 'DELETE',
+      credentials: 'include',
       headers: this._headers
     })
       .then((res) => {
@@ -72,6 +77,7 @@ class Api {
   deleteCardApi(id) {
     return fetch(this._baseUrl + `/cards/${id}`, {
       method: 'DELETE',
+      credentials: 'include',
       headers: this._headers
     })
       .then((res) => {
@@ -82,6 +88,7 @@ class Api {
   changeAvatarApi(data) {
     return fetch(this._baseUrl + '/users/me/avatar', {
       method: 'PATCH',
+      credentials: 'include',
       headers: this._headers,
       body: JSON.stringify({
         avatar: data.avatar

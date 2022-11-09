@@ -22,6 +22,7 @@ export const signup = (email, password) => {
 export const signin = (email, password) => {
   return fetch(`${BASE_URL}/signin`, {
     method: 'POST',
+    credentials: 'include',
     headers: {
       'Content-Type': 'application/json'
     },
@@ -33,6 +34,7 @@ export const signin = (email, password) => {
 export const getToken = (token) => {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
+    credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`,
