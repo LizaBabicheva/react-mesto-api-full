@@ -40,7 +40,7 @@ function App() {
     if (loggedIn) {
       api.getApiUserInfo(userData)
         .then((userInfo) => {
-          setCurrentUser(userInfo);
+          setCurrentUser(userInfo.data);
         })
         .catch((err) => {
           console.log(err);
