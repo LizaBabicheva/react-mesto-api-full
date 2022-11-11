@@ -178,9 +178,9 @@ function App() {
   }
 
   function handleCardDelete() {
-    api.deleteCardApi(cardDelete._id)
+    api.deleteCardApi(cardDelete)
       .then(() => {
-        setCards((cards) => cards.filter(card => card !== cardDelete._id));
+        setCards((cards) => cards.filter(item => item !== cardDelete._id));
         closeAllPopups();
       })
       .catch((err) => {
