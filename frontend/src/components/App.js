@@ -180,7 +180,7 @@ function App() {
   function handleCardDelete() {
     api.deleteCardApi(cardDelete._id)
       .then(() => {
-        setCards(cards.filter(item => item !== cardDelete._id));
+        setCards((cards) => cards.filter(item => item !== cardDelete._id));
         closeAllPopups();
       })
       .catch((err) => {
