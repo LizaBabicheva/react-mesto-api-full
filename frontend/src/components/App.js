@@ -138,10 +138,22 @@ function App() {
       })
   }
 
+  // function handleSignOut() {
+  //   localStorage.removeItem('token');
+  //   setLoggedIn(false);
+  //   history.push('/sign-in');
+  // }
+
   function handleSignOut() {
-    localStorage.removeItem('token');
-    setLoggedIn(false);
-    history.push('/sign-in');
+    auth.signout()
+    .then(() => {
+      setEmail('');
+      setLoggedIn(false);
+      history.push('/sign-in');
+    })
+    .catch((err) => {
+      console.log(err);
+    })
   }
 
   function handleUpdateUser(userData) {

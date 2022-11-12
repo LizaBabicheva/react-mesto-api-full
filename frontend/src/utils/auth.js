@@ -53,3 +53,14 @@ export const getInfo = () => {
   })
     .then(getResponseData)
 }
+
+export const signout = () => {
+  return fetch(`${BASE_URL}/signout`, {
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+    .then(getResponseData)
+}
