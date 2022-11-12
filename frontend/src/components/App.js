@@ -138,12 +138,6 @@ function App() {
       })
   }
 
-  // function handleSignOut() {
-  //   localStorage.removeItem('token');
-  //   setLoggedIn(false);
-  //   history.push('/sign-in');
-  // }
-
   function handleSignOut() {
     auth.signout()
     .then(() => {
@@ -203,7 +197,7 @@ function App() {
   function handleAddPlaceSubmit(card) {
     api.addNewCardApi(card)
       .then((newCard) => {
-        setCards([newCard.card, ...cards]);
+        setCards([newCard, ...cards]);
         closeAllPopups();
       })
       .catch((err) => {
