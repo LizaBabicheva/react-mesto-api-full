@@ -126,7 +126,7 @@ function App() {
   function handleLogin(data) {
     auth.signin(data.email, data.password)
       .then((res) => {
-        if (res.token) {
+        if (res.message === 'Успешная авторизация') {
           localStorage.setItem('token', res.token);
           setEmail(data.email);
           setLoggedIn(true);
