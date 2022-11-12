@@ -109,3 +109,7 @@ module.exports.getUserInfo = (req, res, next) => {
     })
     .catch((next));
 };
+
+module.exports.logout = (req, res) => {
+  res.clearCookie('authorization').send({ message: 'До свидания!' });
+};

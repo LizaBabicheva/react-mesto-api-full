@@ -4,7 +4,7 @@ const { celebrate, Joi } = require('celebrate');
 const auth = require('../middlewares/auth');
 
 const {
-  getUsers, getUserById, updateUser, updateAvatar, getUserInfo, createUser, login,
+  getUsers, getUserById, updateUser, updateAvatar, getUserInfo, createUser, login, logout,
 } = require('../controllers/users');
 
 routerUsers.post('/signup', celebrate({
@@ -46,5 +46,7 @@ routerUsers.patch('/users/me/avatar', celebrate({
     avatar: Joi.string().required().pattern(/^(https?:\/\/)?([\w-]{1,32}\.[\w-]{1,32})[^\s@]*$/),
   }),
 }), auth, updateAvatar);
+
+routerUsers.get('/signout', auth, logout);
 
 module.exports = routerUsers;
