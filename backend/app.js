@@ -43,11 +43,11 @@ app.get('/crash-test', () => {
 app.use(routerUsers);
 app.use('/', auth, routerCards);
 
-app.use(errorLogger);
-
 app.use('*', () => {
   throw new NotFoundError('Запрашиваемый путь не найден');
 });
+
+app.use(errorLogger);
 
 app.use(errors());
 
