@@ -30,4 +30,4 @@ Frontend [здесь](https://mesto.lizababicheva.nomoredomains.icu/)
 
 Backend: https://api.mesto.lizababicheva.nomoredomains.icu/
 
-Публичный IP сервера 158.160.11.158
+Публичный IP сервера 84.201.143.65
