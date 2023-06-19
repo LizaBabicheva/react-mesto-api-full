@@ -26,8 +26,4 @@
 - MongodDB
 
 ## Ссылки
-Frontend [здесь](https://mesto.lizababicheva.nomoredomains.icu/)
-
-Backend: https://api.mesto.lizababicheva.nomoredomains.icu/
-
-Публичный IP сервера 84.201.143.65
+Посмотреть проект можно [здесь](https://mesto.lizababicheva.nomoredomains.icu/)
