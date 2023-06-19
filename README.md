@@ -21,6 +21,7 @@
 - CCS3
 - JavaScript (стандарт ES6)
 - React.js
+- Node.js
 - Адаптивная верстка (мобильные устройства, планшеты, десктопы);
 - Express
 - MongodDB
